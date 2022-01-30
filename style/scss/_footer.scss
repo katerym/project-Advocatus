@@ -1,0 +1,38 @@
+footer {
+    height: 81px;
+    background-color: $dark-bcg;
+
+    .container {
+        height: 100%;
+        padding: 0;
+    }
+
+    .single-col {
+        width: 50%;
+        margin: auto 0;
+    }
+
+    .footer-icon {
+        text-align: right;
+    }
+
+    p {
+        color: #fbfbfb;
+    }
+
+    span {
+        font-family: $header-font;
+        color: $medium-text-color;
+    }
+
+    a {
+        padding: 10px;
+        font-size: 16px;
+        line-height: 30px;
+        color: #fbfbfb;
+
+        @include sm {
+            padding: 20px;
+        }
+    }
+}

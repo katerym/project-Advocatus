@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body.contrast {
+    background: $black;
+
+    .contact-answer .contact-box {
+        background-color: $black;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    li,
+    a,
+    i,
+    span {
+        color: $yellow;
+    }
+
+    .about .single-col:first-of-type {
+
+        span,
+        p {
+            color: $yellow;
+        }
+    }
+
+    .img-slider .info .slide-title {
+
+        p,
+        h2 {
+            color: $yellow;
+        }
+    }
+
+    .button {
+        background: $black;
+    }
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+li {
+    font-family: $basic-font;
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1090px;
+    margin: 0 auto;
+    padding: 0 0 50px;
+}
+
+.container-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.single-col {
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include md {
+        width: 48%;
+    }
+}
+
+hgroup {
+    position: relative;
+    margin: 50px 0;
+    padding: 0 0 0 20px;
+
+    @include md {
+        margin: 80px 0;
+    }
+
+    &::before {
+        position: absolute;
+        top: -60px;
+        left: 5px;
+        font-family: $basic-font;
+        font-size: 174px;
+        letter-spacing: 8px;
+        font-weight: 400;
+        color: $dark-text-color;
+        opacity: 0.05;
+
+        @include sm {
+            top: -65px;
+        }
+    }
+}

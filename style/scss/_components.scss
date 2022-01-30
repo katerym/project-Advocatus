@@ -1,0 +1,229 @@
+.heading-line {
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: $yellow;
+}
+
+// przyciski
+.button {
+    display: inline-block;
+    width: 181px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: $yellow;
+    text-align: center;
+    font-family: $header-font;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 50px;
+    color: $dark-text-color;
+}
+
+//ikony 
+.icon {
+    width: 25%;
+    padding-right: 25px;
+    text-align: right;
+    font-family: "Font Awesome";
+    font-size: 40px;
+    color: $yellow;
+}
+
+// slider główny
+.img-slider {
+    width: 100%;
+    max-width: 1920px;
+    height: 90vh;
+    max-height: 840px;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-slider .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: inset(0 100% 0 0);
+    @include basic-background;
+}
+
+.slide1 {
+    background-image: url(../../img/slide.jpg);
+}
+
+.slide2 {
+    background-image: url(../../img/slide.jpg);
+}
+
+.slide3 {
+    background-image: url(../../img/slide.jpg);
+}
+
+.img-slider .slide.active {
+    clip-path: inset(0 0 0 0);
+    transition: 1s;
+    transition-property: clip-path;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: $gradient-bcg;
+}
+
+.img-slider .slide .info {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include sm {
+        top: 70%;
+        justify-content: space-evenly;
+    }
+}
+
+.slide-title {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+
+    @include sm {
+        margin-bottom: 0;
+    }
+}
+
+.img-slider .slide .info h2 {
+    font-size: 35px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $white;
+
+    @include sm {
+        font-size: 45px;
+    }
+}
+
+.img-slider .slide .info p {
+    width: 60%;
+    padding: 0;
+    font-size: 16px;
+    color: $white;
+
+    @include sm {
+        padding: 10px;
+    }
+}
+
+.img-slider .slide .info .button {
+    margin-left: 20px;
+}
+
+.img-slider .navigation {
+    display: flex;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.img-slider .navigation .btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 10px;
+    background: $light-grey;
+    cursor: pointer;
+}
+
+.img-slider .navigation .btn.active {
+    background: $yellow;
+}
+
+// formularz
+form {
+    width: 76%;
+    margin: 0 auto;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: $basic-font;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 31px;
+    font-weight: 400;
+    font-style: italic;
+    color: $medium-text-color;
+}
+
+input.text,
+textarea.text {
+    width: 100%;
+    padding: 35px 0 10px;
+    border-bottom: 1px solid $light-grey;
+    font-size: 15px;
+    font-family: $basic-font;
+    color: $basic-text-color;
+}
+
+textarea.text {
+    padding: 30px 0 10px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+input.button {
+    margin-top: 30px;
+}
+
+.answer {
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.contact-answer {
+    height: calc(100vh - 180px);
+}
+
+// przeiwjanie na górę
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    z-index: 99;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: $yellow;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+    width: 35px;
+    height: 35px;
+    transition: all 0.7s ease-in-out;
+
+    .fa-angle-up {
+        padding: 0;
+        color: $black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+        background-color: $grey;
+    }
+}

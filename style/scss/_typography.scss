@@ -1,0 +1,56 @@
+$basic-font: 'Open Sans',
+sans-serif;
+$header-font: 'Playfair Display',
+serif;
+
+
+// na sliderze
+h1 {
+    font-family: $header-font;
+    font-weight: 400;
+    font-size: 65px;
+    line-height: 45px;
+    letter-spacing: 3px;
+    color: $white;
+}
+
+// tytul sekcji
+h2 {
+    font-family: $header-font;
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 45px;
+    letter-spacing: 1px;
+    color: $dark-text-color;
+}
+
+// rozwiniecie tytulu sekcji
+h3 {
+    max-width: 771px;
+    font-family: $header-font;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 31px;
+    letter-spacing: 1px;
+    color: #666666;
+}
+
+h4 {
+    margin-bottom: 30px;
+    font-family: $header-font;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 31px;
+    letter-spacing: 1px;
+    color: $dark-text-color;
+}
+
+p {
+    max-width: 499px;
+    font-family: $basic-font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 31px;
+    letter-spacing: 1px;
+    color: $basic-text-color;
+}
